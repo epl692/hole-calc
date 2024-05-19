@@ -2,7 +2,7 @@ let
   pkgs = import <nixpkgs> { };
 in
   pkgs.stdenv.mkDerivation {
-    name = "hello-nix";
+    name = "hole-calc";
     
     buildInputs = [
       pkgs.nasm
@@ -16,6 +16,6 @@ in
 
     installPhase = ''
       mkdir -p $out/bin
-      cp calc  $out/bin/calc
+      cp calc  $out/bin/hole-calc
     '';
   }
