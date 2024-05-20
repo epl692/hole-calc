@@ -1,7 +1,6 @@
-let
-  pkgs = import <nixpkgs> { };
-in
-  pkgs.stdenv.mkDerivation {
+  { pkgs, lib }:
+
+  pkgs.stdenv.mkDerivation rec {
     name = "hole-calc";
     
     buildInputs = [
